@@ -6,15 +6,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OperacionFuegoNegocio {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OperacionFuegoNegocio.class);
 
 
-    public Respuesta postSecret(Satelites satelites){
+    public Respuesta postSecret(List<Satelites> listaSatelites){
         Respuesta respuesta = new Respuesta();
-        LOGGER.info("Satelites: {}",satelites);
+        LOGGER.info("Satelites: {}",listaSatelites);
         return respuesta;
     }
 }

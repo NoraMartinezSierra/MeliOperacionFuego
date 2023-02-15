@@ -1,10 +1,12 @@
 package com.operacionfuego.meli.dto;
 
+import java.util.List;
+
 public class Satelites {
 
     private String name;
     private Double distance;
-    private String message;
+    private List<String> message;
 
     public String getName() {
         return name;
@@ -22,11 +24,20 @@ public class Satelites {
         this.distance = distance;
     }
 
-    public String getMessage() {
+    public List<String> getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(List<String> message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        return "Satelites{" +
+                "name='" + name + '\'' +
+                ", distance=" + distance +
+                ", message=" + message +
+                '}';
     }
 }

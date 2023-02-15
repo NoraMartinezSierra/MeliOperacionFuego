@@ -1,7 +1,5 @@
 package com.operacionfuego.meli.dto;
 
-import java.util.Date;
-
 public class Respuesta {
 
     private Boolean exitosa;

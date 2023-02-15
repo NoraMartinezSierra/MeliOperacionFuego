@@ -4,20 +4,23 @@ import com.operacionfuego.meli.dto.Respuesta;
 import com.operacionfuego.meli.dto.Satelites;
 import com.operacionfuego.meli.negocio.OperacionFuegoNegocio;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.CompletableFuture;
+import java.util.List;
 
 @RestController
 @RequestMapping("/topsecret")
 public class OperacionFuegoControlador {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(OperacionFuegoControlador.class);
 
     private OperacionFuegoNegocio operacionFuegoNegocio;
 
@@ -35,8 +38,9 @@ public class OperacionFuegoControlador {
     @PostMapping(
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<Respuesta> abstractMovements(@RequestBody Satelites satelites) {
-        Respuesta respuesta = operacionFuegoNegocio.postSecret(satelites);
+    public ResponseEntity<Respuesta> postSatelites(@RequestBody List<Satelites> listaSatelites) {
+        LOGGER.info("Satelites en el controlador: {}", listaSatelites);
+        Respuesta respuesta = operacionFuegoNegocio.postSecret(listaSatelites);
         return ResponseEntity.ok(respuesta);
     }
 }
