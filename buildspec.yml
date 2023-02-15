@@ -1,0 +1,12 @@
+server:
+  port:8080
+
+spring:
+  devtools:
+    remote:
+      secret: secret
+      livereload:
+        enable:true
+      restart:
+        enable:true
+      log-condition-evaluation-delta:true
