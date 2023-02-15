@@ -1,11 +1,14 @@
-server:
-  port:8080
-
-spring:
-  devtools:
-    remote:
-      secret: secret
-      livereload:
-        enable:true
-      restart:
-        enable:true
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  post_build:
+    commands:
+      - mvn package
+      - mv target/meli-*.jar ./
+artifacts:
+  files:
+    - 'meli-*.jar'
+    - 'meli.jks'
+    - '.ebextensions/*'
