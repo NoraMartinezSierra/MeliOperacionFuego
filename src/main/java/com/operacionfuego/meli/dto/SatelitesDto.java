@@ -2,7 +2,7 @@ package com.operacionfuego.meli.dto;
 
 import java.util.List;
 
-public class Satelites {
+public class SatelitesDto {
 
     private String name;
     private Double distance;

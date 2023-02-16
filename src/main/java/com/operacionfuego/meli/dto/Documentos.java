@@ -1,23 +1,14 @@
 package com.operacionfuego.meli.dto;
 
-public class Documentos {
+public class Documentos<T> {
 
-    private Double position;
-    private String message;
+    private T data;
 
-    public Double getPosition() {
-        return position;
+    public T getData() {
+        return data;
     }
 
-    public void setPosition(Double position) {
-        this.position = position;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    public void setData(T data) {
+        this.data = data;
     }
 }
