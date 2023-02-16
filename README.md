@@ -1,13 +1,17 @@
 # MeliOperacionFuego
 Mercado libre Evaluación para desarrolladores backend
 
+nivel 1
 se crea repositorio en github
 se sube proyecto en AWS
-la url del apigateway es esta
-https://p3lc5ye4x9.execute-api.us-east-1.amazonaws.com/prod/topsecret
-la url del servidor 
-http://operacionf.us-east-1.elasticbeanstalk.com/topsecret
+
+nivel 2
 se crea servicio que recibe la lista de satelites
+para probar los servicios se puede desde el postman apuntar 
+la url del apigateway que es esta
+https://p3lc5ye4x9.execute-api.us-east-1.amazonaws.com/prod/topsecret
+se envia este objeto
+
 [
 {
 "name": "kenobi",
@@ -25,7 +29,8 @@ se crea servicio que recibe la lista de satelites
 }
 ]
 
-y retorn esta respuesta
+y retorna esta respuesta
+
 {
     "exitosa": true,
     "estado": 200,
@@ -40,8 +45,12 @@ y retorn esta respuesta
         }
     }
 }
+la url del servidor 
+http://operacionf.us-east-1.elasticbeanstalk.com/topsecret
 
-para el nivel 
+
+
+para el nivel  3
 
 recibe un satelite y retorna el mensaje que logra capturar
 
