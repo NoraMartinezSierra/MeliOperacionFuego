@@ -15,8 +15,18 @@ public class OperacionFuegoNegocio {
 
 
     public Respuesta postSecret(List<Satelites> listaSatelites){
-        Respuesta respuesta = new Respuesta();
         LOGGER.info("Satelites: {}",listaSatelites);
+        Respuesta respuesta ;
+        respuesta = respuestaEstandar(200,"Post success");
+
         return respuesta;
+    }
+
+    public Respuesta respuestaEstandar(Integer status, String message) {
+        Respuesta res = new Respuesta();
+        res.setEstado(status);
+        res.setMensaje(message);
+        res.setExitosa(true);
+        return res;
     }
 }
