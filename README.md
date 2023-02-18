@@ -9,7 +9,7 @@ nivel 2
 se crea servicio que recibe la lista de satelites
 para probar los servicios se puede desde el postman apuntar 
 la url del apigateway que es esta
-https://p3lc5ye4x9.execute-api.us-east-1.amazonaws.com/prod/topsecret/topsecret_split?name=sato
+https://p3lc5ye4x9.execute-api.us-east-1.amazonaws.com/prod/topsecret
 se envia este objeto
 
 [
@@ -53,7 +53,7 @@ http://operacionf.us-east-1.elasticbeanstalk.com/topsecret
 para el nivel  3
 
 recibe un satelite y retorna el mensaje que logra capturar
-
+https://p3lc5ye4x9.execute-api.us-east-1.amazonaws.com/prod/topsecret/topsecret_split?name=sato
 [
 {
 "name": "sato",
